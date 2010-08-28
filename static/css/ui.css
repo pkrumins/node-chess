@@ -29,3 +29,11 @@
     font-weight: bold;
     color: white;
 }
+
+#games {
+    position: fixed;
+    top: 2.5em;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}

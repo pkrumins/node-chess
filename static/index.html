@@ -2,6 +2,7 @@
 <head>
 <title>Node Chess</title>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="/render/vendor/raphael-min.js"></script>
 <script type="text/javascript">
     // some stuff for the node and browser code to get along:
     var module, exports;
@@ -36,14 +37,20 @@
     include('game', '/game/game.js');
     include('client', '/client.js');
 </script>
+<script type="text/javascript" src="/render/thumbnail.js"></script>
 <link rel="stylesheet" href="/css/ui.css">
+<link rel="stylesheet" href="/css/thumbnail.css">
 </head>
 <body>
-    <form id="">
+    <form id="nameform">
     <div id="topbar">
         <input id="name" type="text" value="name">
         <input type="submit" value="play chess">
     </div>
     </form>
+    
+    <div id="games">
+        
+    </div>
 </body>
 </html>
