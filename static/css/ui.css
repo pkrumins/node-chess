@@ -1,0 +1,31 @@
+#topbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 1.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+    color: white;
+    background-color: rgb(70,70,70);
+}
+
+#topbar input {
+    height: 1.5em;
+    padding: 0.25em;
+    border-width: 0px;
+}
+
+#topbar input[type='text'] {
+    position: relative;
+    top: -1px;
+}
+
+#topbar input[type='submit'] {
+    padding-left: 0.5em;
+    padding-right: 0.6em;
+    background-color: rgb(250,50,50);
+    font-weight: bold;
+    color: white;
+}
