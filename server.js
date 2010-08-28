@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-require.paths.unshift(process.env.HOME + '/.node_libraries'); // >_<
+require.paths.unshift(process.env.HOME + '/.node_libraries');
 
 var fs = require('fs');
 var connect = require('connect');
