@@ -36,6 +36,10 @@
     include('board', '/game/board.js');
     include('game', '/game/game.js');
     include('client', '/client.js');
+    
+    $('#vote-badge').ready(function () {
+        $('input#name').val('player' + Math.floor(Math.random() * 10000));
+    });
 </script>
 <script type="text/javascript" src="/render/thumbnail.js"></script>
 <link rel="stylesheet" href="/css/ui.css">
@@ -44,8 +48,16 @@
 <body>
     <form id="nameform">
     <div id="topbar">
-        <input id="name" type="text" value="name">
+        <input id="name" type="text" value="">
         <input type="submit" value="play chess">
+        <div id="vote">
+            <a
+                href="http://nodeknockout.com/teams/dark-knights"
+            ><img src="http://nodeknockout.com/images/voteko.png"
+                width="126" height="63"
+                id="vote-badge" alt="vote!"
+            /></a>
+        </div>
     </div>
     </form>
     

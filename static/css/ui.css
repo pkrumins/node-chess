@@ -3,23 +3,20 @@
     top: 0px;
     left: 0px;
     right: 0px;
-    height: 1.5em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    padding-left: 0.5em;
+    height: 50px;
     color: white;
-    background-color: rgb(70,70,70);
+    background-color: rgb(170,170,170);
+    padding-left: 1em;
 }
 
 #topbar input {
-    height: 1.5em;
-    padding: 0.25em;
+    height: 30px;
+    margin-top: 10px;
     border-width: 0px;
 }
 
 #topbar input[type='text'] {
-    position: relative;
-    top: -1px;
+    padding-left: 5px;
 }
 
 #topbar input[type='submit'] {
@@ -30,9 +27,16 @@
     color: white;
 }
 
+#topbar #vote {
+    border-width: 0px;
+    position: fixed;
+    right: 0px;
+    top: -7px;
+}
+
 #games {
     position: fixed;
-    top: 2.5em;
+    top: 50px;
     bottom: 0px;
     left: 0px;
     right: 0px;
