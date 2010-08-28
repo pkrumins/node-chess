@@ -34,6 +34,13 @@
     top: -7px;
 }
 
+#topbar #irc {
+    position: fixed;
+    right: 150px;
+    top: 15px;
+    font-weight: bold;
+}
+
 #games {
     position: fixed;
     top: 50px;
