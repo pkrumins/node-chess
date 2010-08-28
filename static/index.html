@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>Node Chess</title>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="/render/vendor/jquery-min.js"></script>
 <script type="text/javascript" src="/render/vendor/raphael-min.js"></script>
 <script type="text/javascript">
     // some stuff for the node and browser code to get along:
@@ -30,11 +30,13 @@
     }
     
     include('dnode', '/dnode.js');
+    include('events', '/events.js');
     include('square', '/game/square.js');
     include('movechecker', '/game/movechecker.js');
     include('movegenerator', '/game/movegenerator.js');
     include('board', '/game/board.js');
     include('game', '/game/game.js');
+    include('player', '/game/player.js');
     include('client', '/client.js');
     
     $('#vote-badge').ready(function () {
@@ -50,10 +52,15 @@
     <div id="topbar">
         <input id="name" type="text" value="">
         <input type="submit" value="play chess">
+        
+        <div id="irc">
+            irc.freenode.net/#stackvm
+        </div>
+        
         <div id="vote">
             <a
                 href="http://nodeknockout.com/teams/dark-knights"
-            ><img src="http://nodeknockout.com/images/voteko.png"
+            ><img src="/images/voteko.png"
                 width="126" height="63"
                 id="vote-badge" alt="vote!"
             /></a>
