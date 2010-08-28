@@ -1,4 +1,7 @@
 .thumbnail {
-    margin: 25px;
+    display: inline;
     width: 200px;
+    height: 250px;
+    margin: 25px;
 }
+
