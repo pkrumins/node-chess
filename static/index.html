@@ -4,18 +4,24 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
 <script type="text/javascript">
     // some stuff for the node and browser code to get along:
-    var exported = {};
     var module, exports;
     
+    require.exported = {};
     function require(file) {
         var base = file.match(/([^\/]+)$/)[0];
-        return exported[base].module.exports;
+        if (base in require.exported) {
+            return require.exported[base].module.exports;
+        }
+        else {
+            console.warn("Can't load module '" + base + "'");
+            return {};
+        }
     }
     
     function include(base, src) {
         document.write(
             '<script type="text/javascript">'
-            + 'exported.' + base + ' = {module:module={exports:exports={}}}'
+            + 'require.exported.' + base + ' = {module:module={exports:exports={}}}'
             + '<' + '/script>'
             + '<script type="text/javascript" src="' + escape(src) + '">'
             + '<' + '/script>'
@@ -24,6 +30,7 @@
     
     include('dnode', '/dnode.js');
     include('game', '/game/game.js');
+    include('movechecker', '/game/movechecker.js');
     include('board', '/game/board.js');
     include('client', '/client.js');
 </script>
