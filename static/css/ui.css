@@ -28,10 +28,13 @@
 }
 
 #topbar #vote {
-    border-width: 0px;
     position: fixed;
     right: 0px;
     top: -7px;
+}
+
+#topbar #vote a img {
+    border-width: 0px;
 }
 
 #topbar #irc {
