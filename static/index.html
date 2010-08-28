@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>Node Chess</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
 <script type="text/javascript">
     // some stuff for the node and browser code to get along:
     var exported = {};
@@ -21,12 +22,15 @@
         );
     }
     
+    include('dnode', '/dnode.js');
     include('game', '/game/game.js');
     include('board', '/game/board.js');
+    include('client', '/client.js');
 </script>
 
 </head>
 <body>
 pow!
+<div id="meow"></div>
 </body>
 </html>
