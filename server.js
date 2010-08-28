@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+require.paths.unshift(process.env.HOME + '/.node_libraries'); // >_<
+
 var fs = require('fs');
 var connect = require('connect');
 var DNode = require('dnode');
