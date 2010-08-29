@@ -9,19 +9,6 @@
     padding-left: 1em;
 }
 
-#bottombar {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    height: 20px;
-    color: red;
-    font-weight: bold;
-    background-color: rgb(170,170,170);
-    padding-top: 2px;
-    padding-left: 1em;
-}
-
 #topbar input {
     height: 30px;
     margin-top: 10px;
@@ -55,6 +42,35 @@
     right: 150px;
     top: 15px;
     font-weight: bold;
+}
+
+#bottombar {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 20px;
+    color: red;
+    font-weight: bold;
+    background-color: rgb(170,170,170);
+    padding-top: 2px;
+    padding-left: 1em;
+}
+
+#bottombar #toggle-mode {
+    background-color: rgb(250,50,50);
+    font-weight: bold;
+    color: white;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}
+
+#bottombar #toggle-topside {
+    background-color: rgb(250,50,50);
+    font-weight: bold;
+    color: white;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
 }
 
 #games {
