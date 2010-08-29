@@ -70,6 +70,24 @@ input.angry {
     color: rgb(150,255,150);
 }
 
+#errorbar {
+    position: fixed;
+    display: none;
+    top: 4px;
+    left: 250px;
+    height: 40px;
+    width: 600px;
+    margin: auto;
+}
+
+#errorbar #notify {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-weight: bold;
+}
+
 #bottombar {
     position: fixed;
     bottom: 0px;
