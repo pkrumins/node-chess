@@ -59,6 +59,30 @@ module.exports = {
             if (move.pos == 'E4') ok++;
         });
         assert.equal(ok,5);
+    },
+    'black-knight-check-white-king' : function (assert) {
+        var b5 = new Board;
+        b5.move(1,7,3,2);
+        var moves = MoveGenerator(b5, newState(), b5.at(2,1), true);
+        assert.equal(moves.length, 1);
+
+        var ok = 0;
+        moves.forEach(function (move) {
+            if (move.pos == 'D3') ok++;
+        });
+        assert.equal(ok,1);
+
+        var moves = MoveGenerator(b5, newState(), b5.at(4,1), true);
+        assert.equal(moves.length, 1);
+
+        var ok = 0;
+        moves.forEach(function (move) {
+            if (move.pos == 'D3') ok++;
+        });
+        assert.equal(ok,1);
+
+        var moves = MoveGenerator(b5, newState(), b5.at(3,1), true);
+        assert.equal(moves.length, 0);
     }
 };
 
