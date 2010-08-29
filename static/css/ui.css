@@ -9,7 +9,7 @@
     padding-left: 1em;
 }
 
-#notify {
+#bottombar {
     position: fixed;
     bottom: 0px;
     left: 0px;
@@ -17,6 +17,7 @@
     height: 20px;
     color: red;
     font-weight: bold;
+    background-color: rgb(170,170,170);
     padding-top: 2px;
     padding-left: 1em;
 }
