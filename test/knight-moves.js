@@ -41,6 +41,24 @@ module.exports = {
         b3.move(1,1,3,4);       
         b3.move(3,1,5,4);       
         b3.move(4,1,6,3);       
+        var moves = MoveGenerator(b3, newState(), b3.at(4,2), true);
+        assert.equal(moves.length, 0);
+    },
+    'white-knight-one-move-from-starting' : function (assert) {
+        var b4 = new Board;
+        b4.move(1,0,2,2);
+        var moves = MoveGenerator(b4, newState(), b4.at(2,2), true);
+        assert.equal(moves.length, 5);
+
+        var ok = 0;
+        moves.forEach(function (move) {
+            if (move.pos == 'B1') ok++;
+            if (move.pos == 'A4') ok++;
+            if (move.pos == 'B5') ok++;
+            if (move.pos == 'D5') ok++;
+            if (move.pos == 'E4') ok++;
+        });
+        assert.equal(ok,5);
     }
 };
 
