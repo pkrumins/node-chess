@@ -2,6 +2,8 @@
 require.paths.unshift(process.env.HOME + '/.node_libraries');
 
 var fs = require('fs');
+var sys = require('sys');
+
 var connect = require('connect');
 var DNode = require('dnode');
 var Service = require('./lib/service');
@@ -12,25 +14,28 @@ var html = { index : fs.readFileSync(__dirname + '/static/index.html') };
 var js = bundleScript();
 
 // All javascript into one file for MOAR FASTAR page loads
-function bundleScript () { return [
-    require('dnode/web').source(),
-    ('render/vendor/jquery-min render/vendor/raphael-min'
-    + ' events game/square game/board game/movegenerator game/player game/game'
-    + ' render/thumbnail render/viewer client')
-    .split(/\s+/).map(function (filename) {
-        var file = __dirname + '/lib/' + filename + '.js';
-        if (port != 80) { // development mode
-            // regenerate the bundle when files change
-            fs.watchFile(file, function () {
-                js = bundleScript();
-            });
-        }
-        return fs.readFileSync(file).toString()
-            .replace(/^(module|exports)\..*/mg, '')
-            .replace(/^var \S+\s*=\s*require\(.*/mg, '')
-        ;
-    }).join('\n')
-].join('\n') }
+function bundleScript () {
+    return require('dnode/web').source()
+        + ('render/vendor/jquery-min render/vendor/raphael-min events'
+        + ' game/square game/board game/movegenerator game/player game/game'
+        + ' render/thumbnail render/viewer client')
+        .split(/\s+/).map(function (filename) {
+            var file = __dirname + '/lib/' + filename + '.js';
+            var src = fs.readFileSync(file).toString()
+                .replace(/^(module|exports)\..*/mg, '')
+                .replace(/^var \S+\s*=\s*require\(.*/mg, '')
+            ;
+            
+            if (port != 80) { // development mode
+                // regenerate the bundle when files change
+                fs.watchFile(file, function () {
+                    js = bundleScript();
+                });
+            }
+            
+            return src;
+        }).join('\n');
+}
 
 var server = connect.createServer(
     connect.staticProvider(__dirname + '/static'),

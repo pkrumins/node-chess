@@ -129,5 +129,60 @@ module.exports = {
         });
         assert.equal(ok, 3);
     },
+    'black-w-e' : function (assert) {
+        var bx = new Board;
+        var state = newState();
+        bx.move(0,1,0,3);
+        bx.move(1,1,1,3);
+        bx.move(2,1,2,3);
+        bx.move(0,6,0,4);
+        bx.move(1,6,1,4);
+        bx.move(2,6,2,4);
+
+        moves = MoveGenerator(bx,state,bx.at(1,4),true);
+        assert.equal(moves.length, 2);
+
+        var ok=0;
+        moves.forEach(function (move) {
+            if (move.pos == 'A4') ok++;
+            if (move.pos == 'C4') ok++;
+        });
+        assert.equal(ok, 2);
+    },
+    'white-w-e' : function (assert) {
+        var bx = new Board;
+        var state = newState();
+        bx.move(0,1,0,3);
+        bx.move(1,1,1,3);
+        bx.move(2,1,2,3);
+        bx.move(0,6,0,4);
+        bx.move(1,6,1,4);
+        bx.move(2,6,2,4);
+
+        moves = MoveGenerator(bx,state,bx.at(1,3),true);
+        assert.equal(moves.length, 2);
+
+        var ok=0;
+        moves.forEach(function (move) {
+            if (move.pos == 'A5') ok++;
+            if (move.pos == 'C5') ok++;
+        });
+        assert.equal(ok, 2);
+    },
+    'cant-move' : function (assert) {
+        var bx = new Board;
+        var state = newState();
+        bx.move(3,1,3,4);
+        bx.move(2,6,2,5);
+        state.moves.push(
+            {
+                piece : bx.pieceAt(2,5),
+                from : { x : 2, y : 6 },
+                to : { x : 2, y : 5 }
+            } 
+        );
+        moves = MoveGenerator(bx,state,bx.at(3,4),true);
+        assert.equal(moves.length, 2);
+    }
 };
 
