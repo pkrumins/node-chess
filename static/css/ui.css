@@ -44,6 +44,32 @@ input.angry {
     font-weight: bold;
 }
 
+#topbar #vs {
+    margin: auto;
+    margin-top: -25px;
+    padding-left: 140px;
+    width: 400px;
+    font-weight: bold;
+}
+
+#topbar #vs span.vs {
+    margin-left: 1em;
+    margin-right: 1em;
+    color: rgb(200,50,50);
+}
+
+#topbar #vs span.black {
+    color: rgb(50,50,50);
+}
+
+#topbar #vs span.white {
+    color: white;
+}
+
+#topbar #vs span.empty {
+    color: rgb(150,255,150);
+}
+
 #bottombar {
     position: fixed;
     bottom: 0px;
