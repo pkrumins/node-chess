@@ -168,6 +168,21 @@ module.exports = {
             if (move.pos == 'C5') ok++;
         });
         assert.equal(ok, 2);
+    },
+    'cant-move' : function (assert) {
+        var bx = new Board;
+        var state = newState();
+        bx.move(3,1,3,4);
+        bx.move(2,6,2,5);
+        state.moves.push(
+            {
+                piece : bx.pieceAt(2,5),
+                from : { x : 2, y : 6 },
+                to : { x : 2, y : 5 }
+            } 
+        );
+        moves = MoveGenerator(bx,state,bx.at(3,4),true);
+        assert.equal(moves.length, 2);
     }
 };
 
