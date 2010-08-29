@@ -15,9 +15,10 @@ var server = connect.createServer(
     connect.staticProvider(__dirname + '/static'),
     connect.staticProvider(__dirname + '/lib'),
     function (req, res) {
-        if (req.url == '/dnode.js') {
+        var m = req.url.match(/([^\/.]+)\.js/);
+        if (m && m[1] in js) {
             res.writeHead(200, { 'Content-Type' : 'text/javascript' });
-            res.end(js.dnode);
+            res.end(js[m[1]]);
         }
         else {
             res.writeHead(200, { 'Content-Type' : 'text/html' });
