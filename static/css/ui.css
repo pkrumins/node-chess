@@ -13,18 +13,18 @@
     height: 30px;
     margin-top: 10px;
     border-width: 0px;
-}
-
-#topbar input[type='text'] {
     padding-left: 5px;
+    background-color: rgb(200,200,200);
+    font-weight: bold;
+    font-size: 12pt;
 }
 
-#topbar input[type='submit'] {
-    padding-left: 0.5em;
-    padding-right: 0.6em;
-    background-color: rgb(250,50,50);
-    font-weight: bold;
-    color: white;
+input.angry {
+    color: red;
+}
+
+#topbar input:focus {
+    background-color: white;
 }
 
 #topbar #vote {
