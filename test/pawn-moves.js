@@ -74,5 +74,12 @@ module.exports = {
         }
         assert.equal(ok,2);
     },
+    'one-move-only' : function (assert) {
+        var bx = new Board;
+        bx.move(4,0,4,4);
+        var moves = MoveGenerator(bx,newState(),bx.at(4,6),true);
+        assert.equal(moves.length,1);
+        assert.ok(moves[0].x == 4 && moves[0].y == 5);
+    }
 };
 
