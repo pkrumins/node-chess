@@ -1,7 +1,6 @@
 .board {
+    position: float;
     margin: auto;
     margin-top: 25px;
-    width: 750px;;
-    height: 500px;
 }
 
