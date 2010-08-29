@@ -49,7 +49,7 @@
     bottom: 0px;
     left: 0px;
     right: 0px;
-    height: 30px;
+    height: 20px;
     color: red;
     font-weight: bold;
     background-color: rgb(170,170,170);
@@ -57,7 +57,15 @@
     padding-left: 1em;
 }
 
-#bottombar #toggle {
+#bottombar #toggle-mode {
+    background-color: rgb(250,50,50);
+    font-weight: bold;
+    color: white;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}
+
+#bottombar #toggle-topside {
     background-color: rgb(250,50,50);
     font-weight: bold;
     color: white;
