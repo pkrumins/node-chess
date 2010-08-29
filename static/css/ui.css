@@ -88,20 +88,12 @@ input.angry {
     font-weight: bold;
 }
 
-#bottombar {
+#toggle-mode {
     position: fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    height: 20px;
-    color: red;
-    font-weight: bold;
-    background-color: rgb(170,170,170);
-    padding-top: 2px;
-    padding-left: 1em;
-}
-
-#bottombar #toggle-mode {
+    bottom: 20px;
+    left: 20px;
+    width: 64px;
+    height: 64px;
     background-color: rgb(250,50,50);
     font-weight: bold;
     color: white;
@@ -109,7 +101,12 @@ input.angry {
     padding-right: 0.2em;
 }
 
-#bottombar #toggle-topside {
+#toggle-topside {
+    position: fixed;
+    bottom: 20px;
+    left: 104px;
+    width: 64px;
+    height: 64px;
     background-color: rgb(250,50,50);
     font-weight: bold;
     color: white;
