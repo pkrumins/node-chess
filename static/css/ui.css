@@ -9,6 +9,19 @@
     padding-left: 1em;
 }
 
+#notify {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 20px;
+    color: red;
+    font-weight: bold;
+    background-color: rgb(170,170,170);
+    padding-top: 2px;
+    padding-left: 1em;
+}
+
 #topbar input {
     height: 30px;
     margin-top: 10px;
