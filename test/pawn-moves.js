@@ -104,6 +104,30 @@ module.exports = {
         });
         assert.equal(ok, 2);
     },
+    'en-passant-black' : function (assert) {
+        var bx = new Board;
+        var state = newState();
+        bx.move(4,6,4,3);
+        bx.move(5,1,5,2);
+        bx.move(3,1,3,3);
+        state.moves.push(
+            {
+                piece : bx.pieceAt(3,3),
+                from : { x : 3, y : 1 },
+                to : { x : 3, y : 3 }
+            } 
+        );
 
+        moves = MoveGenerator(bx,state,bx.at(4,3),true);
+        assert.equal(moves.length, 3);
+
+        var ok = 0;
+        moves.forEach(function (move) {
+            if (move.position == 'D3') ok++;
+            if (move.position == 'E3') ok++;
+            if (move.position == 'F3') ok++;
+        });
+        assert.equal(ok, 3);
+    },
 };
 
