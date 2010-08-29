@@ -1,63 +1,7 @@
 <html>
 <head>
 <title>Node Chess</title>
-<script type="text/javascript" src="/render/vendor/jquery-min.js"></script>
-<script type="text/javascript" src="/render/vendor/raphael-min.js"></script>
-<script type="text/javascript">
-    // some stuff for the node and browser code to get along:
-    var module, exports;
-    
-    require.exported = {};
-    function require(file) {
-        var base = file.match(/([^\/]+)$/)[0];
-        if (base in require.exported) {
-            return require.exported[base].module.exports;
-        }
-        else {
-            console.warn("Can't load module '" + base + "'");
-            return {};
-        }
-    }
-    
-    function script (params) {
-        if (params.code) {
-            document.write('<script type="text/javascript">'
-                + params.code + '<' + '/script>');
-        }
-        if (params.src) {
-            document.write('<script type="text/javascript" src="'
-            + escape(params.src) + '">' + '<' + '/script>');
-        }
-    }
-    
-    function include(base, src) {
-        script({
-            code : 'require.exported.' + base
-                + ' = {module:module={exports:exports={}}}',
-            src : src
-        });
-    }
-    
-    include('dnode', '/dnode.js');
-    script({ code :
-        'require.exported.traverse = { module : { exports : Traverse } };\n'
-        + 'require.exported.hash = { module : { exports : Hash } };\n'
-    });
-    include('events', '/events.js');
-    include('square', '/game/square.js');
-    include('board', '/game/board.js');
-    include('movegenerator', '/game/movegenerator.js');
-    include('player', '/game/player.js');
-    include('game', '/game/game.js');
-    include('player', '/game/player.js');
-    include('client', '/client.js');
-    
-    $('#vote-badge').ready(function () {
-        $('input#name').val('player' + Math.floor(Math.random() * 10000));
-    });
-</script>
-<script type="text/javascript" src="/render/thumbnail.js"></script>
-<script type="text/javascript" src="/render/viewer.js"></script>
+<script type="text/javascript" src="/bundle.js"></script>
 <link rel="stylesheet" href="/css/ui.css">
 <link rel="stylesheet" href="/css/thumbnail.css">
 <link rel="stylesheet" href="/css/viewer.css">
