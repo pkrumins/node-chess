@@ -80,6 +80,30 @@ module.exports = {
         var moves = MoveGenerator(bx,newState(),bx.at(4,6),true);
         assert.equal(moves.length,1);
         assert.ok(moves[0].x == 4 && moves[0].y == 5);
-    }
+    },
+    'en-passant-white' : function (assert) {
+        var bx = new Board;
+        var state = newState();
+        bx.move(2,1,2,4);
+        bx.move(1,6,1,4);
+        state.moves.push(
+            {
+                piece : bx.pieceAt(1,4),
+                from : { x : 1, y : 6 },
+                to : { x : 1, y : 4 }
+            } 
+        );
+
+        moves = MoveGenerator(bx,state,bx.at(2,4),true);
+        assert.equal(moves.length, 2);
+
+        var ok = 0;
+        moves.forEach(function (move) {
+            if (move.position == 'B6') ok++;
+            if (move.position == 'C6') ok++;
+        });
+        assert.equal(ok, 2);
+    },
+
 };
 
