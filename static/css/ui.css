@@ -94,7 +94,6 @@ input.angry {
     left: 20px;
     width: 64px;
     height: 64px;
-    background-color: rgb(250,50,50);
     font-weight: bold;
     color: white;
     padding-left: 0.2em;
@@ -107,7 +106,6 @@ input.angry {
     left: 104px;
     width: 64px;
     height: 64px;
-    background-color: rgb(250,50,50);
     font-weight: bold;
     color: white;
     padding-left: 0.2em;

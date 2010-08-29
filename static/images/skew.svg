@@ -12,9 +12,9 @@
    id="svg4314"
    version="1.0"
    inkscape:version="0.47 r22583"
-   width="78.90831"
-   height="50.445965"
-   sodipodi:docname="rect.svg"
+   width="64"
+   height="64"
+   sodipodi:docname="skew.svg"
    sodipodi:version="0.32"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    inkscape:export-filename="/home/substack/projects/node-chess/static/images/gunpoint.png"
@@ -28,7 +28,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -108,27 +108,27 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1280"
-     inkscape:window-height="999"
+     inkscape:window-height="949"
      id="namedview4316"
      showgrid="false"
      inkscape:zoom="5.6568543"
      inkscape:cx="17.297833"
-     inkscape:cy="28.961376"
-     inkscape:window-x="1280"
-     inkscape:window-y="0"
+     inkscape:cy="28.607823"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg4314" />
   <path
      sodipodi:nodetypes="ccccc"
      id="rect3238"
-     d="M 21.830726,0 56.923846,0.098804 78.90831,50.445965 0,50.445965 21.830726,3e-7 z"
+     d="m 18.325105,12.493375 27.468605,0.07733 17.208004,39.408476 -61.7642771,0 17.0876681,-39.48581 z"
      style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
   <path
-     style="fill:#dddddd;fill-opacity:1;stroke:#b3b3b3;stroke-width:0.1258176;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     style="fill:#dddddd;fill-opacity:1;stroke:#b3b3b3;stroke-width:0.0984818;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
      d=""
      id="path4366" />
   <path
      style="fill:#000000;fill-opacity:1;stroke:none"
-     d="m 39.378766,0.0597595 0,11.7499995 12.25,0.0625 -2.25,-11.8124995 -10,0 z m -17.34375,0.125 -5.34375,11.6874995 0.03125,0 -0.0625,0.125 0.21875,0 0.0625,-0.125 12.625,-0.09375 -2.6875,12.5625 12.4375,0 0.25,13.34375 17.3125,0 -2.9375,-13.40625 -14.59375,0 0,-12.5 -9.75,0 2.4375,-11.5937495 -10,0 z m 29.625,11.6249995 2.46875,12.5625 13.28125,0 -5.3125,-12.5625 -10.4375,0 z m -24.8125,12.53125 -15.5625,0.125 -5.71875,12.9375 18.28125,0.3125 -2.6875,12.5625 18.4375,0 0,-12.5625 -15.71875,0 2.96875,-13.375 z m -21.4375,13.34375 0,0.03125 0.09375,0 0,-0.03125 -0.09375,0 z m 51.5,0.0625 2.46875,12.5625 19.53125,0 -5.5625,-12.5625 -16.4375,0 z m -50.5,12.4375 0,0.0625 9.09375,0 -9.09375,-0.0625 z"
+     d="m 32.060566,12.540151 0,9.197133 9.588501,0.04892 -1.761154,-9.246054 -7.827347,0 z m -13.575556,0.09784 -4.182739,9.148212 0.02446,0 -0.04892,0.09784 0.171223,0 0.04892,-0.09784 9.882026,-0.07338 -2.1036,9.833106 9.735264,0 0.195684,10.444617 13.551095,0 -2.299283,-10.493538 -11.423036,0 0,-9.784185 -7.631664,0 1.907916,-9.07483 -7.827347,0 z m 23.188517,9.099291 1.932376,9.833105 10.395696,0 -4.158278,-9.833105 -8.169794,0 z m -19.421606,9.808645 -12.18131,0.09784 -4.4762642,10.126631 14.3093702,0.244605 -2.1036,9.833105 14.431672,0 0,-9.833105 -12.303612,0 2.323744,-10.469077 z m -16.7798765,10.444619 0,0.02446 0.073381,0 0,-0.02446 -0.073381,0 z m 40.3108395,0.04892 1.932377,9.833106 15.287788,0 -4.353962,-9.833106 -12.866203,0 z m -39.5281048,9.735264 0,0.04892 7.1179938,0 -7.1179938,-0.04892 z"
      id="rect2872-5" />
 </svg>
