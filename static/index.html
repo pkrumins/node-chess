@@ -19,23 +19,35 @@
         }
     }
     
+    function script (params) {
+        if (params.code) {
+            document.write('<script type="text/javascript">'
+                + params.code + '<' + '/script>');
+        }
+        if (params.src) {
+            document.write('<script type="text/javascript" src="'
+            + escape(params.src) + '">' + '<' + '/script>');
+        }
+    }
+    
     function include(base, src) {
-        document.write(
-            '<script type="text/javascript">'
-            + 'require.exported.' + base + ' = {module:module={exports:exports={}}}'
-            + '<' + '/script>'
-            + '<script type="text/javascript" src="' + escape(src) + '">'
-            + '<' + '/script>'
-        );
+        script({
+            code : 'require.exported.' + base
+                + ' = {module:module={exports:exports={}}}',
+            src : src
+        });
     }
     
     include('dnode', '/dnode.js');
+    script({ code :
+        'require.exported.traverse = { module : { exports : Traverse } };\n'
+        + 'require.exported.hash = { module : { exports : Hash } };\n'
+    });
     include('events', '/events.js');
     include('square', '/game/square.js');
-    include('movechecker', '/game/movechecker.js');
-    include('movegenerator', '/game/movegenerator.js');
     include('player', '/game/player.js');
     include('board', '/game/board.js');
+    include('movegenerator', '/game/movegenerator.js');
     include('game', '/game/game.js');
     include('player', '/game/player.js');
     include('client', '/client.js');
