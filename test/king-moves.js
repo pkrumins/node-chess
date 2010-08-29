@@ -130,7 +130,7 @@ module.exports = {
     },
     'black-castling-short-attack2' : function (assert) {
         var b = new Board;
-        b.move(5,7,5,7);
+        b.move(5,7,5,5);
         b.move(6,7,6,5);
         b.move(6,0,6,5);
         moves = MoveGenerator(b, newState(), b.at(4,0), true);
