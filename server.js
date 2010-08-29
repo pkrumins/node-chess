@@ -29,7 +29,11 @@ function bundleScript () {
             if (port != 80) { // development mode
                 // regenerate the bundle when files change
                 fs.watchFile(file, function () {
-                    js = bundleScript();
+                    try {
+                        js = bundleScript();
+                    } catch (e) {
+                        console.log("Couldn't bundle. Probably fine though.");
+                    }
                 });
             }
             

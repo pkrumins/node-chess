@@ -70,20 +70,30 @@ input.angry {
     color: rgb(150,255,150);
 }
 
-#bottombar {
+#errorbar {
     position: fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    height: 20px;
-    color: red;
-    font-weight: bold;
-    background-color: rgb(170,170,170);
-    padding-top: 2px;
-    padding-left: 1em;
+    display: none;
+    top: 4px;
+    left: 250px;
+    height: 40px;
+    width: 600px;
+    margin: auto;
 }
 
-#bottombar #toggle-mode {
+#errorbar #notify {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+#toggle-mode {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 64px;
+    height: 64px;
     background-color: rgb(250,50,50);
     font-weight: bold;
     color: white;
@@ -91,7 +101,12 @@ input.angry {
     padding-right: 0.2em;
 }
 
-#bottombar #toggle-topside {
+#toggle-topside {
+    position: fixed;
+    bottom: 20px;
+    left: 104px;
+    width: 64px;
+    height: 64px;
     background-color: rgb(250,50,50);
     font-weight: bold;
     color: white;
